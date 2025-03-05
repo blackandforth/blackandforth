@@ -1,0 +1,67 @@
+import React from "react";
+
+const ResearchDevelopment = () => {
+  return (
+    <div className="bg-gray-100">
+      {/* Hero Section */}
+      <div
+        className="relative bg-cover bg-center h-[350px] flex flex-col items-center justify-center text-white px-6"
+        style={{ backgroundImage: "url('/counseling-session.jpg')" }}
+      >
+        <h1 className="text-2xl font-bold text-center">RESEARCH AND DEVELOPMENT</h1>
+        <p className="max-w-3xl text-center mt-4">
+          Research is a fundamental aspect of understanding phenomena. An effective research project requires
+          the application of relevant scientific methodologies and techniques, which play a crucial role in
+          delivering accurate research outcomes.
+        </p>
+        <button className="mt-6 border border-white px-6 py-2 rounded-full hover:bg-white hover:text-gray-900 transition">
+          FIND OUT MORE
+        </button>
+      </div>
+      
+      {/* Contact Section */}
+      <div className="max-w-6xl mx-auto py-12 px-6 grid md:grid-cols-2 gap-12">
+        {/* Contact Info */}
+        <div>
+          <h2 className="text-lg font-semibold">Please feel free to complete the form and we’ll get back to you as soon as possible</h2>
+          <div className="mt-6">
+            <p className="font-semibold">Call Us</p>
+            <a href="tel:+27821398549" className="text-blue-600">+27 (0) 82 319 8549</a>
+          </div>
+          <div className="mt-4">
+            <p className="font-semibold">Email Support</p>
+            <a href="mailto:foundation@blackandforth.co.za" className="text-blue-600">foundation@blackandforth.co.za</a>
+          </div>
+        </div>
+
+        {/* Contact Form */}
+        <div className="bg-white shadow-md p-6 rounded-md">
+          <h3 className="text-lg font-semibold">Contact Us</h3>
+          <form className="mt-4">
+            <div className="grid grid-cols-2 gap-4">
+              <input type="text" placeholder="First name" className="border p-2 w-full rounded-md" />
+              <input type="text" placeholder="Last name" className="border p-2 w-full rounded-md" />
+            </div>
+            <input type="email" placeholder="Email address" className="border p-2 w-full mt-4 rounded-md" />
+            <textarea placeholder="Message" className="border p-2 w-full mt-4 rounded-md" rows="4"></textarea>
+            <button className="mt-4 bg-green-600 text-white px-6 py-2 rounded-md w-full hover:bg-green-700 transition">
+              Proceed
+            </button>
+          </form>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="text-center text-gray-600 py-6 border-t">
+        <p>&copy; 2025 Black and Forth. All rights reserved.</p>
+        <div className="flex justify-center gap-4 mt-2 text-sm">
+          <a href="#" className="hover:text-gray-900">Privacy Policy</a>
+          <a href="#" className="hover:text-gray-900">Terms & Conditions</a>
+          <a href="#" className="hover:text-gray-900">Cookie Policy</a>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default ResearchDevelopment;
