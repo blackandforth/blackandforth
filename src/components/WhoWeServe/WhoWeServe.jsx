@@ -30,9 +30,10 @@ const WhoWeServe = () => {
 
   return (
     <section className="py-16 px-6 md:px-20 bg-white text-gray-800 text-center font-poppins">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
+      <div className="w-16 h-1 bg-teal-700 mx-auto mb-6"></div>
         <h2 className="text-3xl font-semibold mb-4">WHO DO WE SERVE</h2>
-        <p className="text-gray-700 leading-relaxed mb-8">
+        <p className="text-gray-700 text-justify leading-relaxed mb-8">
           The Foundation is resolute in bridging the gap between the underserved and mainstream socio-economic 
           channels. Significant disparities exist within township and rural communities, where many individuals 
           lack the resources to access or create opportunities. Our mission, as the Foundation, is to provide the 

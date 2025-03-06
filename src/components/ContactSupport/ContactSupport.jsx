@@ -102,7 +102,7 @@ const ContactSupport = () => {
         <h2 className="text-xl font-semibold">
           Building Sustainable Futures, One Strategy at a Time.
         </h2>
-        <button className="mt-4 px-6 py-2 border border-white rounded-lg hover:bg-white hover:text-green-900 transition">
+        <button className="mt-4 px-6 py-2 border border-white rounded-lg bg-teal-700 transition">
           Contact Us
         </button>
       </div>

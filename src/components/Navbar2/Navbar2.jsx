@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaChevronDown } from "react-icons/fa";
+import { TiArrowSortedDown } from "react-icons/ti";
 
 const Navbar2 = () => {
   const location = useLocation();
@@ -70,14 +70,14 @@ const Navbar2 = () => {
       </div>
 
       {/* Navigation Links - Pushed to the Right */}
-      <ul className="hidden md:flex space-x-6 text-black ml-auto mr-4">
+      <ul className="hidden md:flex space-x-20 font-semibold text-black ml-auto mr-40">
         {/* Home Dropdown */}
         <li className="relative dropdown-container">
           <button
             className="flex items-center cursor-pointer focus:outline-none"
             onClick={() => toggleDropdown("home")}
           >
-            Home <FaChevronDown className="ml-1 text-sm" />
+            Home <TiArrowSortedDown className="ml-1 text-sm" />
           </button>
           {openDropdown === "home" && (
             <ul className="absolute right-0 mt-2 w-60 bg-white shadow-lg rounded-lg py-2 z-50">
@@ -109,7 +109,7 @@ const Navbar2 = () => {
             className="flex items-center cursor-pointer focus:outline-none"
             onClick={() => toggleDropdown("foundation")}
           >
-            Foundation <FaChevronDown className="ml-1 text-sm" />
+            Foundation <TiArrowSortedDown className="ml-1 text-sm" />
           </button>
           {openDropdown === "foundation" && (
             <ul className="absolute left-0 mt-2 w-72 bg-white shadow-lg rounded-lg py-2 z-50">
@@ -140,7 +140,7 @@ const Navbar2 = () => {
       </ul>
 
       {/* Right-Side Text Toggle */}
-      <div className="bg-gray-800 text-white w-32 h-16 flex items-center justify-center text-lg font-medium">
+      <div className="bg-teal-700 text-white w-32 h-16 flex items-center justify-center text-lg font-medium">
         Foundation
       </div>
     </nav>

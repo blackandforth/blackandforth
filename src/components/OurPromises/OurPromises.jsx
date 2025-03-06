@@ -7,15 +7,15 @@ const OurPromises = () => {
       style={{ backgroundImage: "url('/promise-background.jpg')" }}
     >
       {/* Overlay to darken the background */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
-      <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+      <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
         {/* Left Side - Text Content */}
         <div className="z-10">
           {/* Shorter Line & Adjusted Color */}
-          <div className="w-12 h-1 bg-teal-600 mb-2"></div>  
-          <h2 className="text-4xl font-semibold text-teal-600">OUR PROMISES</h2>
-          <p className="text-2xl font-semibold mt-4">
+          <div className="w-14 h-1 bg-teal-700 mb-6"></div>  
+          <h2 className="text-4xl font-semibold text-teal-700">OUR PROMISES</h2>
+          <p className="text-2xl font-bold mt-4">
             The Foundation is driven by <span className="font-bold">IMPACT</span>. We strive on making
             sustainable impact through measurable outcomes, thus living to our purpose breaking
             through barriers!

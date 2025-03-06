@@ -15,7 +15,7 @@ const Hero2 = () => {
       <Navbar2 />
       
       {/* Hero Content */}
-      <div className="absolute inset-0 flex items-center justify-start p-8 md:p-16">
+      <div className="absolute inset-0 flex items-center justify-start p-8 md:p-16 pt-32 lg:mt-60 md:mt-40">
         <div className="max-w-lg text-white">
           <h1 className="text-3xl md:text-4xl font-bold leading-tight">
             Breaking down barriers to create thriving societies.

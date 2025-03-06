@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaChevronDown } from "react-icons/fa";
+import { TiArrowSortedDown } from "react-icons/ti";
 
 const Navbar = () => {
   const location = useLocation();
@@ -40,7 +40,7 @@ const Navbar = () => {
   const handleNavigation = (path) => {
     if (path.startsWith("/#")) {
       const sectionId = path.replace("/#", "");
-      
+
       if (window.location.pathname === "/foundation") {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -53,7 +53,7 @@ const Navbar = () => {
           if (element) {
             element.scrollIntoView({ behavior: "smooth", block: "start" });
           }
-        }, 300); // Slight delay to allow navigation
+        }, 300);
       }
     } else {
       navigate(path);
@@ -65,19 +65,19 @@ const Navbar = () => {
       {/* Logo */}
       <div>
         <Link to="/">
-          <img src="/main-logo.png" alt="BF Logo" className="h-20" /> 
+          <img src="/main-logo.png" alt="BF Logo" className="h-20" />
         </Link>
       </div>
 
-      {/* Navigation Links - Pushed to the Right */}
-      <ul className="hidden md:flex space-x-6 text-black ml-auto mr-4">
+      {/* Navigation Links - Pushed to the Left with More Spacing */}
+      <ul className="hidden md:flex space-x-20 font-semibold text-black ml-auto mr-40">
         {/* Home Dropdown */}
         <li className="relative dropdown-container">
           <button
             className="flex items-center cursor-pointer focus:outline-none"
             onClick={() => toggleDropdown("home")}
           >
-            Home <FaChevronDown className="ml-1 text-sm" />
+            Home <TiArrowSortedDown className="ml-1 text-sm" />
           </button>
           {openDropdown === "home" && (
             <ul className="absolute right-0 mt-2 w-60 bg-white shadow-lg rounded-lg py-2 z-50">
@@ -91,13 +91,13 @@ const Navbar = () => {
                 { name: "Delivery Management & Advisory", link: "/#delivery-management" },
                 { name: "Track Record", link: "/#track-record" },
               ].map((item, index) => (
-              <li
-                key={index}
-                className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                onClick={() => handleNavigation(item.link)}
-              >
-              {item.name}
-              </li>
+                <li
+                  key={index}
+                  className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => handleNavigation(item.link)}
+                >
+                  {item.name}
+                </li>
               ))}
             </ul>
           )}
@@ -109,7 +109,7 @@ const Navbar = () => {
             className="flex items-center cursor-pointer focus:outline-none"
             onClick={() => toggleDropdown("foundation")}
           >
-            Foundation <FaChevronDown className="ml-1 text-sm" />
+            Foundation <TiArrowSortedDown className="ml-1 text-sm" />
           </button>
           {openDropdown === "foundation" && (
             <ul className="absolute left-0 mt-2 w-72 bg-white shadow-lg rounded-lg py-2 z-50">
@@ -122,12 +122,12 @@ const Navbar = () => {
                 { name: "Research and Development", link: "/#research-development" },
               ].map((item, index) => (
                 <li
-                key={index}
-                className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                onClick={() => handleNavigation(item.link)}
-              >
-              {item.name}
-              </li>
+                  key={index}
+                  className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => handleNavigation(item.link)}
+                >
+                  {item.name}
+                </li>
               ))}
             </ul>
           )}
@@ -135,7 +135,9 @@ const Navbar = () => {
 
         {/* Contact Us Link */}
         <li>
-          <Link to="/contact-us" className="cursor-pointer">Contact Us</Link>
+          <Link to="/contact-us" className="cursor-pointer">
+            Contact Us
+          </Link>
         </li>
       </ul>
 

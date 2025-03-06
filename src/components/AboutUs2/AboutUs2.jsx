@@ -4,7 +4,8 @@ const AboutUs2 = () => {
   return (
     <section className="py-16 px-6 md:px-20 bg-white text-gray-800 text-center">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-4">ABOUT US</h2>
+      <div className="w-16 h-1 bg-teal-700 mx-auto mb-6"></div>
+        <h2 className="text-3xl font-semibold mb-8">ABOUT US</h2>
         <p className="text-gray-700 text-justify leading-relaxed font-poppins">
           The Foundation’s mission is to serve organizations and communities by creating and implementing
           socio-economic initiatives that address critical skills development and entrepreneurship needs.

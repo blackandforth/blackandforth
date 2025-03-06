@@ -23,8 +23,15 @@ export default {
           sm: "3rem",
         },
       },
+      keyframes: {
+        slide: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
       animation: {
         "spin-slow": "spin 40s linear infinite",
+        "slide": "slide 20s linear infinite",
       },
     },
   },
