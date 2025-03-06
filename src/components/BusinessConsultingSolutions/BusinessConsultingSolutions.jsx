@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BusinessConsultingSolutions = () => {
   return (
@@ -57,9 +58,11 @@ const BusinessConsultingSolutions = () => {
       </div>
 
       <div className="mt-10 flex justify-center">
-        <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-3 px-6 rounded-full shadow-md font-poppins">
-          CONTACT US FOR A DISCOVERY CALL
-        </button>
+        <Link to="/contact-us">
+          <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-3 px-6 rounded-full shadow-md font-poppins">
+            CONTACT US FOR A DISCOVERY CALL
+          </button>
+        </Link>
       </div>
     </div>
   );

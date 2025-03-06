@@ -1,6 +1,7 @@
 import React from "react";
 import { FaUserTie, FaUsers, FaChartLine, FaWallet, FaComments, FaDigitalTachograph } from "react-icons/fa";
 
+
 const BusinessCoachingSolutions = () => {
   return (
     <div className="bg-white text-gray-900 py-16 px-6 md:px-16 lg:px-32 text-center">
