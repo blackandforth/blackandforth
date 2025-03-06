@@ -1,5 +1,7 @@
 import React from "react";
-import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin, Music } from "lucide-react";
+import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
+
 
 const Footer = () => {
   return (
@@ -74,7 +76,7 @@ const Footer = () => {
               <Facebook size={20} />
               <Instagram size={20} />
               <Linkedin size={20} />
-              <Music size={20} />
+              <FaTiktok size={20} />
             </div>
           </div>
         </div>
