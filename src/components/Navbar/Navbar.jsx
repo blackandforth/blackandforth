@@ -142,9 +142,15 @@ const Navbar = () => {
       </ul>
 
       {/* Right-Side Text Toggle */}
-      <div className="bg-gray-800 text-white w-32 h-16 flex items-center justify-center text-lg font-medium">
-        {isContactPage ? "Contact Us" : "PTY"}
-      </div>
+      {/* Right-Side Text Toggle */}
+<div
+  className={`w-32 h-16 flex items-center justify-center text-lg font-medium ${
+    isContactPage ? "bg-teal-700" : "bg-gray-800"
+  } text-white`}
+>
+  {isContactPage ? "Contact Us" : "PTY"}
+</div>
+
     </nav>
   );
 };

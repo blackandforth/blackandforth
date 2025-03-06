@@ -38,12 +38,14 @@ const ResearchDevelopment = () => {
           <h2 className="text-lg font-semibold">Please feel free to complete the form and we’ll get back to you as soon as possible</h2>
           <div className="mt-6">
             <p className="font-semibold">Call Us</p>
-            <a href="tel:+27821398549" className="text-black">+27 (0) 82 319 8549</a>
+            <a href="tel:+27821398549" className="text-black underline">+27 (0) 82 319 8549</a>
           </div>
           <div className="mt-4">
             <p className="font-semibold">Email Support</p>
             <h3>Email us & we will get back to you within 24 hours</h3>
-            <a href="mailto:foundation@blackandforth.co.za" className="text-black font-bold">foundation@blackandforth.co.za</a>
+            <a href="mailto:foundation@blackandforth.co.za" className="text-black font-bold underline">
+        foundation@blackandforth.co.za
+      </a>
           </div>
         </div>
 
@@ -65,7 +67,7 @@ const ResearchDevelopment = () => {
       </div>
 
       {/* Footer */}
-      <footer className="text-center text-gray-600 py-6 border-t">
+      <footer className="flex text-center text-gray-600 py-8 border-t justify-between">
         <p>&copy; 2025 Black and Forth. All rights reserved.</p>
         <div className="flex justify-center gap-4 mt-2 text-sm">
           <a href="#" className="hover:text-gray-900">Privacy Policy</a>

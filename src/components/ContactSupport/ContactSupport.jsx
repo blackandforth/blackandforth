@@ -11,7 +11,7 @@ const ContactSupport = () => {
         <div className="text-center mb-6">
           <h2 className="text-3xl font-bold text-gray-900">Contact & Support</h2>
           <p className="text-gray-600 mt-2">
-            We're here to assist you. Whether it's inquiries, consultations, or support, 
+            We're here to assist you. Whether it's inquiries, consultations,<br/> or support, 
             don't hesitate to reach out.
           </p>
         </div>
@@ -60,7 +60,7 @@ const ContactSupport = () => {
 
               <button 
                 type="submit" 
-                className="w-full bg-green-700 text-white font-semibold p-3 rounded-lg hover:bg-green-800 transition"
+                className="w-full bg-teal-700 text-white font-semibold p-3 rounded-lg hover:bg-green-800 transition"
               >
                 Send Message
               </button>
@@ -71,7 +71,7 @@ const ContactSupport = () => {
           <div className="flex flex-col justify-center space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-gray-800">Call Us</h3>
-              <p className="text-green-600 font-medium text-xl">
+              <p className="underline font-medium text-xl">
                 +27 (0) 82 319 8549
               </p>
             </div>
@@ -79,7 +79,7 @@ const ContactSupport = () => {
             <div>
               <h3 className="text-lg font-semibold text-gray-800">Email Support</h3>
               <p className="text-gray-600">Email us & we will get back to you within 24 hours</p>
-              <p className="text-green-600 font-medium text-lg mt-1">
+              <p className="underline font-medium text-lg mt-1">
                 info@blackandforth.co.za
               </p>
             </div>
@@ -98,7 +98,7 @@ const ContactSupport = () => {
       </div>
 
       {/* Call-to-Action Section */}
-      <div className="bg-green-900 text-white text-center py-12">
+      <div className="bg-teal-700 text-white text-center py-20">
         <h2 className="text-xl font-semibold">
           Building Sustainable Futures, One Strategy at a Time.
         </h2>
