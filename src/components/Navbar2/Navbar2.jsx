@@ -70,7 +70,7 @@ const Navbar2 = () => {
       </div>
 
       {/* Navigation Links - Pushed to the Right */}
-      <ul className="hidden md:flex space-x-20 font-semibold text-black ml-auto mr-40">
+      <ul className="hidden md:flex space-x-20 font-semibold text-black ml-auto mr-60">
         {/* Home Dropdown */}
         <li className="relative dropdown-container">
           <button
@@ -140,8 +140,12 @@ const Navbar2 = () => {
       </ul>
 
       {/* Right-Side Text Toggle */}
-      <div className="bg-teal-700 text-white w-32 h-16 flex items-center justify-center text-lg font-medium">
-        Foundation
+      <div className="absolute top-0 right-0 h-full flex items-center">
+        <div
+          className="w-36 h-full flex items-center justify-center text-lg font-medium bg-teal-700 text-white"
+        >
+          Foundation
+        </div>
       </div>
     </nav>
   );

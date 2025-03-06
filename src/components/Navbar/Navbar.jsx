@@ -61,7 +61,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute top-0 left-0 right-0 bg-white flex items-center shadow-md z-50">
+    <nav className="relative bg-white flex items-center shadow-md z-50 w-full">
       {/* Logo */}
       <div>
         <Link to="/">
@@ -70,7 +70,7 @@ const Navbar = () => {
       </div>
 
       {/* Navigation Links - Pushed to the Left with More Spacing */}
-      <ul className="hidden md:flex space-x-20 font-semibold text-black ml-auto mr-40">
+      <ul className="hidden md:flex space-x-20 font-semibold text-black ml-auto mr-60">
         {/* Home Dropdown */}
         <li className="relative dropdown-container">
           <button
@@ -142,15 +142,15 @@ const Navbar = () => {
       </ul>
 
       {/* Right-Side Text Toggle */}
-      {/* Right-Side Text Toggle */}
-<div
-  className={`w-32 h-16 flex items-center justify-center text-lg font-medium ${
-    isContactPage ? "bg-teal-700" : "bg-gray-800"
-  } text-white`}
->
-  {isContactPage ? "Contact Us" : "PTY"}
-</div>
-
+      <div className="absolute top-0 right-0 h-full flex items-center">
+        <div
+          className={`w-36 h-full flex items-center justify-center text-lg font-medium ${
+            isContactPage ? "bg-teal-700" : "bg-gray-800"
+          } text-white`}
+        >
+          {isContactPage ? "Contact Us" : "PTY"}
+        </div>
+      </div>
     </nav>
   );
 };
