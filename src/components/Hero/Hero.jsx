@@ -4,7 +4,7 @@ import Navbar from "../Navbar/Navbar";
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-screen overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -18,8 +18,7 @@ const Hero = () => {
       <div className="absolute inset-0 flex items-center justify-start px-8 md:px-16">
         {/* Dark Oval Shape */}
         <div className="relative">
-        <div className="absolute -top-[580px] -left-40 w-[800px] h-[1220px] bg-black bg-opacity-60 rounded-[40%] transform rotate-[-6deg]"></div>
-
+        <div className="absolute -top-[580px] -left-40 w-[800px] h-[1260px] bg-black bg-opacity-60 rounded-[40%] transform rotate-[-6deg]"></div>
 
           {/* Text Content */}
           <div className="relative max-w-lg text-white p-10 z-10">
@@ -39,3 +38,7 @@ const Hero = () => {
 };
 
 export default Hero;
+
+        
+
+
