@@ -5,7 +5,7 @@ const EntrepreneurshipDevelopment = () => {
   return (
     <div className="bg-white min-h-screen flex flex-col items-center p-12">
       {/* Header */}
-      <div className="w-16 border-t-4 border-teal-700 mt-2"></div>
+      <div className="w-16 border-t-4 border-teal-700 mt-2 mb-6"></div>
       <h2 className="text-3xl font-bold text-center">ENTREPRENEURSHIP DEVELOPMENT</h2>
 
       {/* Content Section */}
