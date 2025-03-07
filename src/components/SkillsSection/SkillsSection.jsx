@@ -3,10 +3,10 @@ import React from "react";
 const SkillsSection = () => {
   return (
     <div className="flex justify-center bg-gray-100 py-12">
-      <div className="flex justify-center items-center gap-6 max-w-6xl w-full">
+      <div className="flex flex-wrap justify-center items-center gap-6 max-w-6xl w-full">
         {/* Professional Skills Programs */}
-        <div className="bg-teal-800 text-white p-8 w-1/3 flex flex-col h-[400px]">
-          <h2 className="text-lg font-semibold font-poppins">Professional Skills Programs</h2>
+        <div className="bg-teal-800 text-white p-8 w-full sm:w-1/3 flex flex-col h-[400px]">
+          <h2 className="text-xl sm:text-lg font-semibold font-poppins">Professional Skills Programs</h2>
           <hr className="w-24 border-black mt-6 mb-6" />
           <ul className="mt-4 space-y-2">
             <li>Project Management</li>
@@ -15,8 +15,8 @@ const SkillsSection = () => {
         </div>
 
         {/* Technology Skills */}
-        <div className="bg-white text-black p-8 w-1/3 flex flex-col shadow-lg h-[400px]">
-          <h2 className="text-lg font-semibold font-poppins">Technology Skills</h2>
+        <div className="bg-white text-black p-8 w-full sm:w-1/3 flex flex-col shadow-lg h-[400px]">
+          <h2 className="text-xl sm:text-lg font-semibold font-poppins">Technology Skills</h2>
           <hr className="w-24 border-black mt-6 mb-6" />
           <ul className="mt-4 space-y-2">
             <li>AI Development</li>
@@ -28,8 +28,8 @@ const SkillsSection = () => {
         </div>
 
         {/* Technical Skills */}
-        <div className="bg-teal-800 text-white p-8 w-1/3 flex flex-col h-[400px]">
-          <h2 className="text-lg font-semibold font-poppins">Technical Skills</h2>
+        <div className="bg-teal-800 text-white p-8 w-full sm:w-1/3 flex flex-col h-[400px]">
+          <h2 className="text-xl sm:text-lg font-semibold font-poppins">Technical Skills</h2>
           <hr className="w-24 border-black mt-6 mb-6" />
           <ul className="mt-4 space-y-2">
             <li>Artisan Training</li>

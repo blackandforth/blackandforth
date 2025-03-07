@@ -9,9 +9,9 @@ const EntrepreneurshipDevelopment = () => {
       <h2 className="text-3xl font-bold text-center">ENTREPRENEURSHIP DEVELOPMENT</h2>
 
       {/* Content Section */}
-      <div className="max-w-5xl mt-8 flex flex-col">
+      <div className="max-w-5xl mt-8 flex flex-col md:flex-row">
         {/* Left Text Section */}
-        <div className="w-full p-4 text-gray-700 text-justify">
+        <div className="w-full md:w-1/2 p-4 text-gray-700 text-justify">
           <p>
             Entrepreneurship in Africa, particularly in South Africa, holds immense
             significance in fostering economic growth, job creation, and social
@@ -31,16 +31,16 @@ const EntrepreneurshipDevelopment = () => {
         </div>
 
         {/* Right Section with Image & List */}
-        <div className="w-full flex justify-between mt-8">
+        <div className="w-full md:w-1/2 flex flex-col md:flex-row items-start mt-8 md:mt-0">
           {/* Image Section */}
           <img
             src="/37197.jpg"
             alt="Success Illustration"
-            className="w-80 h-80"
+            className="w-full md:w-80 h-80 md:h-80 object-cover mb-4 md:mb-0"
           />
 
           {/* Expandable List */}
-          <div className="w-full max-w-md flex flex-col justify-start">
+          <div className="w-full md:max-w-md flex flex-col justify-start md:ml-8">
             <p className="text-gray-700 mb-6 text-justify">
               Our approach places a strong emphasis on three fundamental building blocks
               that are essential for increasing entrepreneurship success.

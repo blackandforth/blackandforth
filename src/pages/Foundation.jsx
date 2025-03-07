@@ -15,7 +15,6 @@ import ResearchDevelopment from "../components/ResearchAndDevelopment/ResearchAn
 const Foundation = () => {
   return (
     <div>
-      <Navbar2 />
       <Hero2 />
       <section id="foundation-about" className="pt-18">
         <AboutUs2 />

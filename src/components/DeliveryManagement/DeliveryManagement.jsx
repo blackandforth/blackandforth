@@ -29,21 +29,25 @@ const DeliveryManagement = () => {
           </div>
           
           {/* List */}
-          <div className="w-full md:w-1/2">
-            {[
-              "Portfolio/Program management office (PMO) establishment and coaching",
-              "Program and Project management Consulting and Coaching",
-              "Project Management Outsourcing",
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="flex items-start border-b pb-6 last:border-none py-2 mr-8"
-              >
-                <Plus className="text-gray-600 mt-1 mr-3" />
-                <span className="text-gray-700 leading-relaxed">{item}</span>
-              </div>
-            ))}
-          </div>
+          <div className="w-full md:w-1/2 px-4 sm:px-6">
+  {[
+    "Portfolio/Program management office (PMO) establishment and coaching",
+    "Program and Project management Consulting and Coaching",
+    "Project Management Outsourcing",
+  ].map((item, index) => (
+    <div
+      key={index}
+      className="flex items-center border-b pb-6 last:border-none py-2 mr-0 md:mr-8 flex-nowrap"
+    >
+      <Plus className="text-gray-600 mr-3 flex-shrink-0" />
+      <span className="text-gray-700 leading-relaxed text-sm sm:text-base min-w-0">
+        {item}
+      </span>
+    </div>
+  ))}
+</div>
+
+
         </div>
       </div>
 

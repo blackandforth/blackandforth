@@ -17,10 +17,11 @@ const Hero2 = () => {
       {/* Hero Content */}
       <div className="absolute inset-0 flex items-center justify-start p-8 md:p-16 pt-32 lg:mt-80 md:mt-60">
         <div className="max-w-lg text-white">
-          <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
             Breaking down barriers to create thriving societies.
           </h1>
-          <button className="mt-12 bg-teal-700 text-white px-40 py-3 rounded-full hover:bg-teal-600">
+          
+          <button className="mt-8 sm:mt-10 md:mt-12 bg-teal-700 text-white px-12 sm:px-20 py-3 rounded-full hover:bg-teal-600 transition-all duration-300">
             CONTACT US
           </button>
         </div>

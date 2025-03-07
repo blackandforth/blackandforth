@@ -15,18 +15,18 @@ const Hero = () => {
       <Navbar />
 
       {/* Hero Content - Positioned Left */}
-      <div className="absolute inset-0 flex items-center justify-start px-8 md:px-16">
+      <div className="absolute inset-0 flex items-center justify-start px-4 sm:px-8 md:px-16">
         {/* Dark Oval Shape */}
         <div className="relative">
-        <div className="absolute -top-[580px] -left-40 w-[800px] h-[1260px] bg-black bg-opacity-60 rounded-[40%] transform rotate-[-6deg]"></div>
+          <div className="absolute -top-[500px] -left-20 sm:-left-40 w-[90vw] sm:w-[800px] h-[90vh] sm:h-[1260px] bg-black bg-opacity-60 rounded-[50%] transform rotate-[-6deg]"></div>
 
           {/* Text Content */}
-          <div className="relative max-w-lg text-white p-10 z-10">
-            <h1 className="text-3xl md:text-4xl font-bold leading-tight font-poppins">
+          <div className="relative max-w-md sm:max-w-lg text-white p-6 sm:p-10 z-10">
+            <h1 className="text-xl sm:text-2xl md:text-4xl font-bold leading-snug sm:leading-tight font-poppins">
               Your strategic partner in navigating the complexities of today’s business landscape to ensure future readiness.
             </h1>
             <Link to="/contact-us">
-              <button className="mt-6 bg-teal-700 text-white px-6 py-3 rounded-full hover:bg-teal-600 w-full">
+              <button className="mt-4 sm:mt-6 bg-teal-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-teal-600 w-full sm:w-auto">
                 CONTACT US
               </button>
             </Link>
@@ -38,7 +38,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-        
-
-

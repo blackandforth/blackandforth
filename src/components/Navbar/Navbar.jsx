@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { TiArrowSortedDown } from "react-icons/ti";
+import { HiMenu } from "react-icons/hi"; // Hamburger Icon
+import { HiX } from "react-icons/hi"; // Close Icon
 
 const Navbar = () => {
   const location = useLocation();
   const isContactPage = location.pathname === "/contact-us";
 
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   // Close dropdown when clicking outside
@@ -63,13 +66,25 @@ const Navbar = () => {
   return (
     <nav className="relative bg-white flex items-center shadow-md z-50 w-full">
       {/* Logo */}
-      <div>
+      <div className="flex items-center justify-between w-full px-4 py-3 md:px-8 md:py-0">
         <Link to="/">
           <img src="/main-logo.png" alt="BF Logo" className="h-20" />
         </Link>
+
+        {/* Mobile Menu Icon */}
+        <button
+          className="md:hidden flex items-center space-x-2"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? (
+            <HiX className="text-2xl" />
+          ) : (
+            <HiMenu className="text-2xl" />
+          )}
+        </button>
       </div>
 
-      {/* Navigation Links - Pushed to the Left with More Spacing */}
+      {/* Desktop Navigation Links */}
       <ul className="hidden md:flex space-x-20 font-semibold text-black ml-auto mr-60">
         {/* Home Dropdown */}
         <li className="relative dropdown-container">
@@ -141,15 +156,44 @@ const Navbar = () => {
         </li>
       </ul>
 
-      {/* Right-Side Text Toggle */}
-      <div className="absolute top-0 right-0 h-full flex items-center">
-        <div
-          className={`w-36 h-full flex items-center justify-center text-lg font-medium ${
-            isContactPage ? "bg-teal-700" : "bg-gray-800"
-          } text-white`}
-        >
-          {isContactPage ? "Contact Us" : "PTY"}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={() => setMobileMenuOpen(false)}></div>
+      )}
+      {mobileMenuOpen && (
+        <div className="fixed top-0 right-0 w-3/4 h-full bg-white z-50 mobile-menu transform transition-all duration-300 ease-in-out">
+          <div className="flex flex-col p-6 space-y-4">
+            <Link
+              to="/"
+              className="py-2 text-xl font-semibold text-black hover:text-teal-700"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link
+              to="/foundation"
+              className="py-2 text-xl font-semibold text-black hover:text-teal-700"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Foundation
+            </Link>
+            <Link
+              to="/contact-us"
+              className="py-2 text-xl font-semibold text-black hover:text-teal-700"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
+      )}
+
+      {/* Right-Side Text Toggle (Hidden on mobile) */}
+      <div
+        className={`absolute top-0 right-0 h-full flex items-center ${
+          isContactPage ? "bg-teal-700" : "bg-gray-800"
+        } text-white w-36 hidden md:flex items-center justify-center text-lg font-medium`}
+      >
+        {isContactPage ? "Contact Us" : "PTY"}
       </div>
     </nav>
   );
