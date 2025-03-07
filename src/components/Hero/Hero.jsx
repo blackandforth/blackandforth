@@ -18,12 +18,14 @@ const Hero = () => {
       <div className="absolute inset-0 flex items-center justify-start px-4 sm:px-8 md:px-16">
         {/* Dark Oval Shape */}
         <div className="relative">
-          {/* Dark Oval Shape */}
+        {/* Dark Oval Shape (Hidden on Small Screens) */}
         <div className="absolute -top-[500px] -left-20 sm:-left-40 
+          hidden sm:block 
           w-[100vw] sm:w-[800px] 
           h-[110vh] sm:h-[1260px] 
           bg-black bg-opacity-60 rounded-[50%] transform rotate-[-6deg]">
         </div>
+
 
 
           {/* Text Content */}
