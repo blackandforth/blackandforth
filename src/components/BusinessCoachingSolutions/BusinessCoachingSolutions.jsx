@@ -1,6 +1,6 @@
 import React from "react";
 import { FaUserTie, FaUsers, FaChartLine, FaWallet, FaComments, FaDigitalTachograph } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 
 const BusinessCoachingSolutions = () => {
   return (
@@ -35,9 +35,11 @@ const BusinessCoachingSolutions = () => {
 
       {/* Contact Button */}
       <div className="mt-10 flex justify-center">
-        <button className="bg-gray-900 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-full shadow font-poppins">
-          CONTACT US FOR A DISCOVERY CALL
-        </button>
+        <Link to="/contact-us">
+          <button className="bg-gray-900 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-full shadow font-poppins">
+            CONTACT US FOR A DISCOVERY CALL
+          </button>
+        </Link>
       </div>
     </div>
   );

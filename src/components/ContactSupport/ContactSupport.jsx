@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 const ContactSupport = () => {
   return (
@@ -102,9 +103,11 @@ const ContactSupport = () => {
         <h2 className="text-xl sm:text-2xl font-semibold">
           Building Sustainable Futures, One Strategy at a Time.
         </h2>
-        <button className="mt-4 px-6 py-2 border border-white rounded-lg bg-teal-700 transition hover:bg-green-700">
-          Contact Us
-        </button>
+        <Link to="/contact-us">
+          <button className="mt-4 px-6 py-2 border border-white rounded-lg bg-teal-700 transition">
+            Contact Us
+          </button>
+        </Link>
       </div>
     </div>
   );

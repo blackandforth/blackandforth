@@ -20,10 +20,11 @@ const Hero2 = () => {
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
             Breaking down barriers to create thriving societies.
           </h1>
-          
-          <button className="mt-8 sm:mt-10 md:mt-12 bg-teal-700 text-white px-12 sm:px-20 py-3 rounded-full hover:bg-teal-600 transition-all duration-300">
-            CONTACT US
-          </button>
+          <Link to="/contact-us">
+            <button className="mt-8 sm:mt-10 md:mt-12 bg-teal-700 text-white px-12 sm:px-20 py-3 rounded-full hover:bg-teal-600 transition-all duration-300">
+              CONTACT US
+            </button>
+          </Link>
         </div>
       </div>
     </div>
