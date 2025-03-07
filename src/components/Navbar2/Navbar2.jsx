@@ -85,7 +85,8 @@ const Navbar2 = () => {
         </div>
   
         {/* Desktop Navigation Links */}
-        <ul className="hidden md:flex space-x-20 font-semibold text-black ml-auto mr-60">
+        <div className="hidden md:flex flex-grow justify-center mr-80">
+        <ul className="flex items-center gap-x-10 font-semibold text-black">
           {/* Home Dropdown */}
           <li className="relative dropdown-container">
             <button
@@ -150,11 +151,12 @@ const Navbar2 = () => {
   
           {/* Contact Us Link */}
           <li>
-            <Link to="/contact-us" className="cursor-pointer">
+            <Link to="/contact-us" className="cursor-pointer whitespace-nowrap">
               Contact Us
             </Link>
           </li>
         </ul>
+        </div>
   
         {mobileMenuOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={() => setMobileMenuOpen(false)}></div>
