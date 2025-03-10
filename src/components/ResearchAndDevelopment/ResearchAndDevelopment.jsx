@@ -68,7 +68,7 @@ const ResearchDevelopment = () => {
   </div>
 
   {/* Footer */}
-  <footer className="flex text-center text-gray-600 py-8 border-t justify-between">
+  <footer className="flex justify-between text-center text-xs text-gray-600 py-4 px-6 border-t">
     <p>&copy; 2025 Black and Forth. All rights reserved.</p>
     <div className="flex justify-center gap-4 mt-2 text-sm">
       <a href="#" className="hover:text-gray-900">Privacy Policy</a>

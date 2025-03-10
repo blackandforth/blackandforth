@@ -98,14 +98,15 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="flex justify-between text-center text-xs text-gray-600 py-4 border-t">
-          &copy; 2025 Black and Forth. All rights reserved.
-          <div className="flex justify-center gap-4 mt-2">
-            <a href="#" className="hover:underline">Privacy Policy</a>
-            <a href="#" className="hover:underline">Terms & Conditions</a>
-            <a href="#" className="hover:underline">Cookie Policy</a>
-          </div>
-        </div>
+        <div className="flex justify-between text-center text-xs text-gray-600 py-4 px-6 border-t">
+  &copy; 2025 Black and Forth. All rights reserved.
+  <div className="flex justify-center gap-4 mt-2">
+    <a href="#" className="hover:underline">Privacy Policy</a>
+    <a href="#" className="hover:underline">Terms & Conditions</a>
+    <a href="#" className="hover:underline">Cookie Policy</a>
+  </div>
+</div>
+
       </div>
     </footer>
   );
