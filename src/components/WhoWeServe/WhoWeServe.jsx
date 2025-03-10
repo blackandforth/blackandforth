@@ -48,7 +48,7 @@ const WhoWeServe = () => {
             <img src={segment.image} alt={segment.title} className="w-full h-40 object-cover" />
             <div className="p-4">
               <h3 className="text-lg font-semibold mb-2">{segment.title}</h3>
-              <p className="text-gray-600 text-sm">{segment.description}</p>
+              <p className="text-gray-600 text-sm text-justify">{segment.description}</p>
             </div>
           </div>
         ))}

@@ -17,7 +17,7 @@ const GuidingPrinciples = () => {
           <img 
             src={GuidingPrinciplesImg} 
             alt="Guiding Principles" 
-            className="w-full max-w-5xl rounded-lg"
+            className="w-full max-w-7xl rounded-lg"
           />
         </div>
       </div>

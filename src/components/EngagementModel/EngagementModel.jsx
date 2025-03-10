@@ -12,7 +12,7 @@ const EngagementModel = () => {
       </div>
       
       <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
-        <div className="relative max-w-3xl">
+        <div className="relative max-w-5xl">
           <img src="/chart-01.png" alt="Engagement Model Chart" className="w-full" />
         </div>
       </div>

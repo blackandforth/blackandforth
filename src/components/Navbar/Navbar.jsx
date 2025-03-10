@@ -76,13 +76,13 @@ const Navbar = () => {
               <ul className="absolute mt-2 w-60 bg-white shadow-lg rounded-lg py-2 z-50">
                 {[
                   { name: "About Us", link: "/#about-us" },
-                  { name: "Principles", link: "/#principles" },
+                  //{ name: "Principles", link: "/#principles" },
                   { name: "Engagement Model", link: "/#engagement-model" },
                   { name: "Business Consulting Solutions", link: "/#business-consulting" },
                   { name: "Business Coaching Solutions", link: "/#business-coaching" },
                   { name: "HR Consulting Solutions & Training", link: "/#hr-consulting" },
                   { name: "Delivery Management & Advisory", link: "/#delivery-management" },
-                  { name: "Track Record", link: "/#track-record" },
+                  //{ name: "Track Record", link: "/#track-record" },
                 ].map((item, index) => (
                   <li
                     key={index}
@@ -156,7 +156,7 @@ const Navbar = () => {
           isContactPage ? "bg-teal-700" : "bg-gray-800"
         }`}
       >
-        {isContactPage ? "Contact Us" : "PTY"}
+        PTY
       </div>
     </nav>
   );

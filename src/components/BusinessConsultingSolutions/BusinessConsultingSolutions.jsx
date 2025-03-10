@@ -16,7 +16,7 @@ const BusinessConsultingSolutions = () => {
         {/* Introductory Section */}
         <div className="bg-gray-100 rounded-lg grid grid-cols-1 md:grid-cols-2 w-full overflow-hidden">
           <div className="p-6 md:p-10 flex items-center">
-            <p className="text-gray-700 leading-relaxed font-poppins">
+            <p className="text-gray-700 leading-relaxed font-poppins text-justify">
               We assist companies in developing comprehensive corporate strategies aligned with market conditions, growth objectives, and capital flows. We craft profitable go-to-market strategies and provide strategic enablement frameworks to support their success. Our strategies are tailored to diverse business domains, catering to your specific needs. We empower businesses to achieve their strategic objectives through industry-proven models that deliver a return on investment. We offer customized solutions to foster growth, scalability, and stability for our clients, encompassing startups, entrepreneurs, corporates, MSMEs, and non-profits.
             </p>
           </div>

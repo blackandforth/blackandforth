@@ -17,7 +17,7 @@ const AboutUs = () => {
           <div className="text-gray-800 self-stretch flex flex-col justify-center">
             <p className="text-md text-justify leading-relaxed font-poppins">
               We are a dynamic management consulting firm committed to driving organizational excellence. 
-              With a focus on strategy enablement, coaching, and leadership development firm, we empower organizations 
+              With a focus on strategy enablement, coaching, and leadership development, we empower organizations 
               to navigate challenges and achieve sustainable growth. Our seasoned consultants bring diverse expertise, 
               delivering tailored solutions to enhance efficiency, foster innovation, and maximize profitability.
             </p>

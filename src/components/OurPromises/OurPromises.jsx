@@ -16,7 +16,7 @@ const OurPromises = () => {
           <div className="w-14 h-1 bg-teal-700 mb-6"></div>  
           <h2 className="text-4xl font-semibold text-teal-700">OUR PROMISES</h2>
           <p className="text-2xl font-bold mt-4">
-            The Foundation is driven by <span className="font-bold">IMPACT</span>. We strive on making
+            The Foundation is driven by <span className="font-bold text-teal-700">IMPACT</span>. We strive on making
             sustainable impact through measurable outcomes, thus living to our purpose breaking
             through barriers!
           </p>

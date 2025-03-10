@@ -2,13 +2,13 @@ import React from "react";
 import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
 
-
 const Footer = () => {
   return (
     <footer className="text-gray-800">
       {/* Logos Section with Sliding Effect */}
-      <div className="bg-white overflow-hidden py-6">
-  <div className="flex space-x-8 animate-slide">
+      {/* Logos Section with Sliding Effect */}
+<div className="bg-white overflow-hidden py-6">
+  <div className="flex space-x-8 animate-slide items-center">
     {[
       "/logo-1.png",
       "/logo-2.png",
@@ -20,7 +20,13 @@ const Footer = () => {
       "/logo-8.png",
       "/logo-9.png",
     ].map((src, index) => (
-      <img key={index} src={src} alt="Partner Logo" className="h-16 object-contain" />
+      <img
+        key={index}
+        src={src}
+        alt={`Partner Logo ${index + 1}`}
+        className="max-h-20 w-auto object-contain" // Increased height, auto width, and clean scaling
+        loading="lazy"
+      />
     ))}
   </div>
 </div>
@@ -43,10 +49,10 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-3">Solutions</h3>
             <ul className="space-y-2">
-              <li>Business Consulting Solutions</li>
-              <li>Business Coaching Solutions</li>
-              <li>HR & Customized Training Solutions</li>
-              <li>Delivery Management & Advisory</li>
+              <li><a href="#business-consulting" className="hover:underline">Business Consulting Solutions</a></li>
+              <li><a href="#business-coaching" className="hover:underline">Business Coaching Solutions</a></li>
+              <li><a href="#hr-consulting" className="hover:underline">HR & Customized Training Solutions</a></li>
+              <li><a href="#delivery-management" className="hover:underline">Delivery Management & Advisory</a></li>
             </ul>
           </div>
 
@@ -54,12 +60,12 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-3">Company</h3>
             <ul className="space-y-2">
-              <li>About Us</li>
-              <li>Our Guiding Principles</li>
-              <li>Our Engagement Model</li>
-              <li>Solutions</li>
-              <li>Blogs</li>
-              <li>Track Record</li>
+              <li><a href="#about-us" className="hover:underline">About Us</a></li>
+              <li><a href="#principles" className="hover:underline">Our Guiding Principles</a></li>
+              <li><a href="#engagement-model" className="hover:underline">Our Engagement Model</a></li>
+              <li><a href="#business-consulting" className="hover:underline">Solutions</a></li>
+              <li><a href="#" className="hover:underline">Blogs</a></li>
+              <li><a href="#track-record" className="hover:underline">Track Record</a></li>
             </ul>
           </div>
 
@@ -92,7 +98,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="text-center text-xs text-gray-600 py-4 border-t">
+        <div className="flex justify-between text-center text-xs text-gray-600 py-4 border-t">
           &copy; 2025 Black and Forth. All rights reserved.
           <div className="flex justify-center gap-4 mt-2">
             <a href="#" className="hover:underline">Privacy Policy</a>
