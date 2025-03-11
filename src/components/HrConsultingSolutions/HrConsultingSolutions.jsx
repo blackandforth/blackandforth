@@ -10,7 +10,7 @@ const HrConsultingSolutions = () => {
         </h2>
       </div>
 
-      <p className="text-gray-700 text-center max-w-6xl mx-auto leading-relaxed mb-8 font-poppins">
+      <p className="text-gray-700 text-center max-w-6xl mx-auto leading-relaxed mb-8 font-poppins text-justify">
         Traditional training solutions, while effective in the past, often fail
         to meet the current needs of organizations, especially those that rely
         on high-performing teams for competitiveness. Our mission is to empower
