@@ -21,8 +21,8 @@ const Hero = () => {
         {/* Dark Oval Shape (Hidden on Small Screens) */}
         <div className="absolute -top-[500px] -left-20 sm:-left-40 
           hidden sm:block 
-          w-[100vw] sm:w-[800px] 
-          h-[110vh] sm:h-[1260px] 
+          w-[100vw] sm:w-[800px]
+          h-[110vh] sm:h-[1260px]
           bg-black bg-opacity-60 rounded-[50%] transform rotate-[-6deg]">
         </div>
 
