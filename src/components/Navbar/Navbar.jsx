@@ -48,7 +48,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative bg-white flex items-center shadow-md z-50 w-full">
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50 flex items-center">
       {/* Logo */}
       <div className="flex items-center justify-between w-full px-4 py-3 md:px-8 md:py-0">
         <Link to="/">
@@ -76,13 +76,11 @@ const Navbar = () => {
               <ul className="absolute mt-2 w-60 bg-white shadow-lg rounded-lg py-2 z-50">
                 {[
                   { name: "About Us", link: "/#about-us" },
-                  //{ name: "Principles", link: "/#principles" },
                   { name: "Engagement Model", link: "/#engagement-model" },
                   { name: "Business Consulting Solutions", link: "/#business-consulting" },
                   { name: "Business Coaching Solutions", link: "/#business-coaching" },
                   { name: "HR Consulting Solutions & Training", link: "/#hr-consulting" },
                   { name: "Delivery Management & Advisory", link: "/#delivery-management" },
-                  //{ name: "Track Record", link: "/#track-record" },
                 ].map((item, index) => (
                   <li
                     key={index}
