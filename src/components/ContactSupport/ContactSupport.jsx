@@ -32,15 +32,15 @@ const ContactSupport = () => {
       email: formData.email,
       phone: formData.phone,
       message: formData.message,
-      recipient: "malusicephas17@gmail.com", // Receiver's email
+      recipient: "info@blackandforth.co.za", // Receiver's email
     };
 
     emailjs
       .send(
-        "service_4xtcjv4", // Replace with EmailJS Service ID
-        "template_gkgmn4d", // Replace with EmailJS Template ID
+        "service_4adi92g", // Replace with EmailJS Service ID
+        "template_6q39ajp", // Replace with EmailJS Template ID
         templateParams,
-        "ULuBSeVY1cd00NGnN" // Replace with EmailJS Public Key
+        "A3HheLfZyBCVci9Tn" // Replace with EmailJS Public Key
       )
       .then(
         (response) => {
@@ -142,13 +142,13 @@ const ContactSupport = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-teal-700 text-white font-semibold p-3 rounded-lg hover:bg-green-800 transition"
+                  className="w-full bg-teal-700 text-white font-semibold p-3 rounded-lg  transition"
                   disabled={loading}
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </button>
 
-                {success && <p className="bg-teal-700 mt-2">{success}</p>}
+                {success && <p className="text-teal-600 mt-2">{success}</p>}
                 {error && <p className="text-red-600 mt-2">{error}</p>}
               </form>
             </div>
