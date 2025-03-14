@@ -1,37 +1,25 @@
 import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigation = (sectionId) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+      }, 300); // Adjust delay if needed
+    } else {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="text-gray-800">
-      {/* Logos Section with Sliding Effect */}
-      {/* Logos Section with Sliding Effect */}
-<div className="bg-white overflow-hidden py-6">
-  <div className="flex space-x-8 animate-slide items-center">
-    {[
-      "/logo-1.png",
-      "/logo-2.png",
-      "/logo-3.png",
-      "/logo-4.png",
-      "/logo-5.png",
-      "/logo-6.png",
-      "/logo-7.png",
-      "/logo-8.png",
-      "/logo-9.png",
-    ].map((src, index) => (
-      <img
-        key={index}
-        src={src}
-        alt={`Partner Logo ${index + 1}`}
-        className="max-h-20 w-auto object-contain" // Increased height, auto width, and clean scaling
-        loading="lazy"
-      />
-    ))}
-  </div>
-</div>
-
-
       <div className="bg-gray-100">
         <div className="container mx-auto px-6 py-10 grid md:grid-cols-4 gap-6 text-sm">
           {/* Guiding Principles */}
@@ -49,10 +37,10 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-3">Solutions</h3>
             <ul className="space-y-2">
-              <li><a href="#business-consulting" className="hover:underline">Business Consulting Solutions</a></li>
-              <li><a href="#business-coaching" className="hover:underline">Business Coaching Solutions</a></li>
-              <li><a href="#hr-consulting" className="hover:underline">HR & Customized Training Solutions</a></li>
-              <li><a href="#delivery-management" className="hover:underline">Delivery Management & Advisory</a></li>
+              <li><button onClick={() => handleNavigation("business-consulting")} className="hover:underline">Business Consulting Solutions</button></li>
+              <li><button onClick={() => handleNavigation("business-coaching")} className="hover:underline">Business Coaching Solutions</button></li>
+              <li><button onClick={() => handleNavigation("hr-consulting")} className="hover:underline">HR & Customized Training Solutions</button></li>
+              <li><button onClick={() => handleNavigation("delivery-management")} className="hover:underline">Delivery Management & Advisory</button></li>
             </ul>
           </div>
 
@@ -60,12 +48,11 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-3">Company</h3>
             <ul className="space-y-2">
-              <li><a href="#about-us" className="hover:underline">About Us</a></li>
-              <li><a href="#principles" className="hover:underline">Our Guiding Principles</a></li>
-              <li><a href="#engagement-model" className="hover:underline">Our Engagement Model</a></li>
-              <li><a href="#business-consulting" className="hover:underline">Solutions</a></li>
-              <li><a href="#" className="hover:underline">Blogs</a></li>
-              <li><a href="#track-record" className="hover:underline">Track Record</a></li>
+              <li><button onClick={() => handleNavigation("about-us")} className="hover:underline">About Us</button></li>
+              <li><button onClick={() => handleNavigation("principles")} className="hover:underline">Our Guiding Principles</button></li>
+              <li><button onClick={() => handleNavigation("engagement-model")} className="hover:underline">Our Engagement Model</button></li>
+              <li><button onClick={() => handleNavigation("business-consulting")} className="hover:underline">Solutions</button></li>
+              <li><button onClick={() => handleNavigation("track-record")} className="hover:underline">Track Record</button></li>
             </ul>
           </div>
 
@@ -99,17 +86,16 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="flex justify-between text-center text-xs text-gray-600 py-4 px-6 border-t">
-  &copy; 2025 Black and Forth. All rights reserved.
-  <div className="flex justify-center gap-4 mt-2">
-    <a href="#" className="hover:underline">Privacy Policy</a>
-    <a href="#" className="hover:underline">Terms & Conditions</a>
-    <a href="#" className="hover:underline">Cookie Policy</a>
-  </div>
-</div>
-
+          &copy; 2025 Black and Forth. All rights reserved.
+          <div className="flex justify-center gap-4 mt-2">
+            <a href="#" className="hover:underline">Privacy Policy</a>
+            <a href="#" className="hover:underline">Terms & Conditions</a>
+            <a href="#" className="hover:underline">Cookie Policy</a>
+          </div>
+        </div>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
