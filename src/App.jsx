@@ -2,6 +2,7 @@ import React, { Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ScrollToTop from "./components/ScrollToTop"; // Import ScrollToTop
 
 // Lazy load pages
 const Home = React.lazy(() => import("./pages/Home"));
@@ -21,12 +22,13 @@ const App = () => {
 
   return (
     <Router>
+      <ScrollToTop /> {/* Ensure scrolling to top on route change */}
       <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-x-hidden">
         <Suspense fallback={<div className="h-screen flex items-center justify-center">Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/foundation" element={<Foundation />} />
-            <Route path="/contact-us" element={<ContactUs />}/>
+            <Route path="/contact-us" element={<ContactUs />} />
           </Routes>
         </Suspense>
       </div>

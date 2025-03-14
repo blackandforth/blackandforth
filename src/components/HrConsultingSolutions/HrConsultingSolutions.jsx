@@ -19,7 +19,7 @@ const HrConsultingSolutions = () => {
         growth.
       </p>
 
-      <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed font-semibold font-poppins">
+      <p className="text-gray-700 max-w-3xl ml-16 leading-relaxed font-semibold font-poppins">
         We offer the following solutions:
       </p>
 
