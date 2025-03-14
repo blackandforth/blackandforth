@@ -1,8 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
+import emailjs from "emailjs-com";
 
 const ContactSupport = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(null);
+  const [error, setError] = useState(null);
+
+  // Handle input change
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccess(null);
+    setError(null);
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+      recipient: "malusicephas17@gmail.com", // Receiver's email
+    };
+
+    emailjs
+      .send(
+        "service_4xtcjv4", // Replace with EmailJS Service ID
+        "template_gkgmn4d", // Replace with EmailJS Template ID
+        templateParams,
+        "ULuBSeVY1cd00NGnN" // Replace with EmailJS Public Key
+      )
+      .then(
+        (response) => {
+          setSuccess("Message sent successfully!");
+          setFormData({ name: "", email: "", phone: "", message: "" });
+        },
+        (err) => {
+          setError("Failed to send message. Please try again.");
+        }
+      )
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
   return (
     <div>
       <Navbar />
@@ -10,10 +63,12 @@ const ContactSupport = () => {
         <div className="max-w-5xl w-full bg-white shadow-lg rounded-lg p-10">
           {/* Header */}
           <div className="text-center mb-6">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Contact & Support</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+              Contact & Support
+            </h2>
             <p className="text-gray-600 mt-2 text-sm sm:text-base">
-              We're here to assist you. Whether it's inquiries, consultations,<br /> or support, 
-              don't hesitate to reach out.
+              We're here to assist you. Whether it's inquiries, consultations,
+              <br /> or support, don't hesitate to reach out.
             </p>
           </div>
 
@@ -21,50 +76,80 @@ const ContactSupport = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
             {/* Left - Form */}
             <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Get in Touch with Us</h3>
-              <form className="space-y-4">
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                Get in Touch with Us
+              </h3>
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
-                  <label className="block text-gray-700 font-medium">Name *</label>
-                  <input 
-                    type="text" 
-                    placeholder="Your name" 
+                  <label className="block text-gray-700 font-medium">
+                    Name *
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    placeholder="Your name"
                     className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-gray-700 font-medium">Email *</label>
-                  <input 
-                    type="email" 
-                    placeholder="example@company.com" 
+                  <label className="block text-gray-700 font-medium">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder="example@company.com"
                     className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-gray-700 font-medium">Phone Number *</label>
-                  <input 
-                    type="tel" 
-                    placeholder="+11 000 000 000" 
+                  <label className="block text-gray-700 font-medium">
+                    Phone Number *
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    placeholder="+11 000 000 000"
                     className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-gray-700 font-medium">Message *</label>
-                  <textarea 
-                    placeholder="Leave us a Message" 
-                    rows="4" 
+                  <label className="block text-gray-700 font-medium">
+                    Message *
+                  </label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    placeholder="Leave us a Message"
+                    rows="4"
                     className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
                   ></textarea>
                 </div>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="w-full bg-teal-700 text-white font-semibold p-3 rounded-lg hover:bg-green-800 transition"
+                  disabled={loading}
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
+
+                {success && <p className="bg-teal-700 mt-2">{success}</p>}
+                {error && <p className="text-red-600 mt-2">{error}</p>}
               </form>
             </div>
 
@@ -78,8 +163,12 @@ const ContactSupport = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-800">Email Support</h3>
-                <p className="text-gray-600">Email us & we will get back to you within 24 hours</p>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  Email Support
+                </h3>
+                <p className="text-gray-600">
+                  Email us & we will get back to you within 24 hours
+                </p>
                 <p className="underline font-medium text-lg mt-1">
                   info@blackandforth.co.za
                 </p>
@@ -92,7 +181,7 @@ const ContactSupport = () => {
       {/* Map Image Section */}
       <div className="w-full h-[350px]">
         <img
-          src="/Joburg-map.png" // Change this to the correct path
+          src="/Joburg-map.png"
           alt="Johannesburg Map"
           className="w-full h-full object-cover"
         />
