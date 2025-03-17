@@ -10,7 +10,6 @@ const EngagementModel = () => {
           Our engagement model is based on the integration of behavioral science, business science, and human capabilities as the foundation of organizational success. These core areas should not operate independently; a systemic thinking approach is necessary to enable comprehensive analysis, solution formulation, and execution. Our engagement model is designed with a future-oriented mindset, while acknowledging current circumstances as the starting point for designing the ideal future.
         </p>
       </div>
-      
       <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
         <div className="relative max-w-5xl">
           <img src="/chart-01.png" alt="Engagement Model Chart" className="w-full" />
